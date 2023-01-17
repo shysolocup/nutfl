@@ -1,7 +1,7 @@
 {
     "name": "nutfl",
     "version": "1.0.0",
-    "description": "A package for JavaScript that is essentially just a library of functions. It includes recreations of some Python package functions as well as a few custom ones that might help with development. Most of the functions work for both Node JS and Web JS.",
+    "description": "A package for JavaScript that is essentially just a library of functions I use while scripting. It includes recreations of some Python package functions as well as a few custom functions that might help with development. Most of the functions work for both Node JS and Web JS.",
     "type": "package",
     "main": "./index.js"
 }
