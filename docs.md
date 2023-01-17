@@ -174,6 +174,14 @@ var variable = {
 
 variable.values; // ["b", ["d", "e"], {"g": "h"}]
 ```
+**object.stringify(replacer, indent);**
+```js
+// same as JSON.stringify() but better
+```
+**object.parse(reviver);**
+```js
+// same as JSON.parse() but better
+```
 **object.indexOf(key);**
 ```js
 // find the index of a key
@@ -184,4 +192,26 @@ var variable = {
 };
 
 variable.indexOf("c"); // 1
+```
+**object.fetchKey(index);**
+```js
+// fetch a key from an index
+var variable = {
+  "a": "b",
+  "c": ["d", "e"],
+  "f": {"g": "h"}
+};
+
+variable.fetchKey(1); // "c"
+```
+**object.fetchValues(index);**
+```js
+// fetch values from an index
+var variable = {
+  "a": "b",
+  "c": ["d", "e"],
+  "f": {"g": "h"}
+};
+
+variable.fetchValues(1); // ["d", "e"]
 ```
