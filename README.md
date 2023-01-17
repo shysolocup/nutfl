@@ -1,5 +1,5 @@
 # nutfl
-A package for JavaScript that is essentially just a library of functions I use while scripting. It includes recreations of some Python package functions as well as a few custom ones that might help with development. Most of the functions work for both Node JS and Web JS.
+A package for JavaScript that is essentially just a library of functions I use while scripting. It includes recreations of some Python package functions as well as a few custom functions that might help with development. Most of the functions work for both Node JS and Web JS.
 
 
 **NOTE:** None of these ports are official I just ported them over because it made it easier for me.
