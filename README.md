@@ -129,6 +129,7 @@ console.log(data.fetchValues(1)); // ["d", "e"]
 - array.endsWithC(string);
 - array.startsWithC(string);
 - array.equalFor(array);
+- array.prune(amount, direction);
 - array.remove(index);
 - array.flip(index1, index2);
 - array.includesFor(array);
