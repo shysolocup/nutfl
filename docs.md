@@ -78,9 +78,9 @@ console.log(minutes); // 2
 let link = 'https://link.png';
 let link2 = 'https://link2.gif';
 
-console.log(link.isImage()); // true
-console.log(link2.isImage()); // false
-console.log(link2.isImage(true)); // true
+link.isImage(); // true
+link2.isImage(); // false
+link2.isImage(true); // true
 ```
 **file.isGIF();**
 ```js
@@ -98,8 +98,8 @@ console.log(link2.isImage(true)); // true
 ```js
 let link = 'https://link.json';
 
-console.log(link.isType("png")); // false
-console.log(link.isType("json")); // true
+link.isType("png"); // false
+link.isType("json"); // true
 ```
 **file.isJS;**
 ```js
@@ -117,8 +117,8 @@ console.log(link.isType("json")); // true
 // overwrites the contents of a JSON file with given data
 // should have a sleep inbetween uses so it doesn't break
 // args are replacer and indent and are all by default null
-let data = {"a": "b"};
 
+let data = {"a": "b"};
 json.dump(data, './file.json', {indent: 4});
 ```
 **json.clear(file);**
@@ -126,4 +126,62 @@ json.dump(data, './file.json', {indent: 4});
 ```js
 // resets the json file back to {}
 json.clear("./file.json");
+```
+**json.set(keys, values, file, args);**
+- json.edit();
+- json.change();
+- json.append();
+- json.create();
+- json.new();
+```js
+// changes the values of a key in a JSON file
+// follows pretty much the same rules as json.dump
+// I should probably put it outside of that but put a sleep inbetween so it doesn't break
+
+json.set(".key", "value", './file.json', {indent: 4});
+json.set("['key']", "value", './file.json', {indent:4});
+```
+**object.length;**
+```js
+// length for an object
+var variable = {
+  "a": "b",
+  "c": ["d", "e"],
+  "f": {"g": "h"}
+};
+
+variable.length; // 3
+```
+**object.keys;**
+```js
+// same as Object.keys() but better
+var variable = {
+  "a": "b",
+  "c": ["d", "e"],
+  "f": {"g": "h"}
+};
+
+variable.keys; // ["a", "c", "f"]
+```
+**object.values;**
+```js
+// same as Object.values() but better
+var variable = {
+  "a": "b",
+  "c": ["d", "e"],
+  "f": {"g": "h"}
+};
+
+variable.values; // ["b", ["d", "e"], {"g": "h"}]
+```
+**object.indexOf(key);**
+```js
+// find the index of a key
+var variable = {
+  "a": "b",
+  "c": ["d", "e"],
+  "f": {"g": "h"}
+};
+
+variable.indexOf("c"); // 1
 ```
