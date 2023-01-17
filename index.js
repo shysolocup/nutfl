@@ -9,10 +9,6 @@ Array.prototype.randomChoice = function() {
 	return this[Math.floor(Math.random() * (Number(this.length)))];
 };
 
-Array.prototype.randomChoice = function() {
-	return this[Math.floor(Math.random() * (Number(this.length)))];
-};
-
 String.prototype.endsWithC = function(stuff) {
 	for (let i = this.length, n = stuff.length; i > 0, n > 0; i--, n--) { if (this[i-1] == stuff[n-1]) { return true; }} return false;
 };
@@ -27,18 +23,6 @@ Array.prototype.endsWithC = function(stuff) {
 
 Array.prototype.startsWithC = function(stuff) {
 	for (let i = 0, n = 0; i < this.length, n < stuff.length; i++, n++) { if (this[i] == stuff[n]) { return true; }} return false;
-};
-
-Array.prototype.equalFor = function(array) {
-    for (let i = 0; i < array.length; i++) { if (this == array[i]) { return true; }} return false;
-};
-
-String.prototype.equalFor = function(array) {
-    for (let i = 0; i < array.length; i++) { if (this == array[i]) { return true; }} return false;
-};
-
-Number.prototype.equalFor = function(array) {
-    for (let i = 0; i < array.length; i++) { if (this == array[i]) { return true; }} return false;
 };
 
 Array.prototype.prune = function(int, type) {
