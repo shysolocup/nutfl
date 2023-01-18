@@ -223,9 +223,131 @@ let string = "number stuffs object this is an array";
 
 string.replaceFor(["number", "object", "array"], "string"); // "string stuffs string this is a string"
 ```
-**string.endsWithC(string);**
+**string.endsWithC(char);**
 ```js
-// check if a string ends with given characters instead of words
+// check if a string ends with a given character instead of word
 let string = "abc def";
 
-string.endsWithC("f")
+string.endsWithC("f"); // true
+string.endsWithC("e"); // false
+```
+**string.startsWithC(char);**
+```js
+// check if a string starts with given a given character instead of word
+let string = "abc def";
+
+string.startsWithC("a"); // true
+string.startsWithC("b"); // false
+```
+**string.get(index, type);**
+```js
+// lets you get parts of strings without having to split
+// type can be "letter" or "l" for letters and "word" or "w" for words
+let string = "string stuff";
+
+string.get(1, "l"); // "t"
+string.get(1, "w"); // "stuff"
+```
+**string.includesFor(array);**
+```js
+// equivalent to using a for loop to check if the string includes stuff
+let string = "string stuff";
+
+string.includesFor( ["string", "stuff"] ); // true
+string.includesFor( ["array", "stuff"] ); // true because it includes "stuff"
+string.includesFor( ["array", "thing"] ); // false
+```
+**string.startsWithFor(array);**
+```js
+// equivalent to using a for loop to check if the string starts with stuff
+let string = "string stuff";
+
+string.startsWithFor( ["string", "array"] ); // true because it starts with "string"
+string.startsWithFor( ["stuff", "array"] ); // false
+```
+**string.endsWithFor(array);**
+```js
+// equivalent to using a for loop to check if the string ends with stuff
+let string = "string stuff";
+
+string.endsWithFor( ["stuff", "thing"] ); // true because it starts with "string"
+string.endsWithFor( ["thing", "other thing"] ); // false
+```
+**string.isImage(includeGIFS);**
+```js
+// check if a link or file name is an image
+// includeGIFS is automatically false
+let link = "https://file.png";
+
+string.isImage(); // true
+```
+**string.isGIF();**
+```js
+// check if a link or file name is a GIF
+let link = "https://file.gif";
+
+string.isGIF(); // true
+```
+**string.isVideo();**
+```js
+// check if a link or file name is a video
+let link = "https://file.mp4";
+
+string.isVideo(); // true
+```
+**string.isAudio();**
+```js
+// check if a link or file name is an audio
+let link = "https://file.mp3";
+
+string.isAudio(); // true
+```
+**string.isType(type);**
+```js
+// check if a link or file name is a given type
+let link = "https://file.json";
+
+string.isType("json"); // true
+```
+**array.randomChoice();**
+```js
+// randomly chooses between things in the array
+let array = [1, 2, 3, 4, 5];
+
+array.randomChoice(); // would randomly pick
+```
+**array.prune(amount, direction);**
+```js
+// removes a given amount of items in an array in a given direciton
+let array = ["a", "b", "c", "d"];
+
+array.prune(2, "<"); // ["a", "b"]
+array.prune(2, ">"); // ["c", "d"]
+```
+**array.remove(index);**
+```js
+// removes a part of an array
+let array = ["a", "b", "c", "d"];
+
+array.remove(1); // ["a", "c", "d"]
+```
+**array.flip(index1, index2);**
+```js
+// flips two items in an array
+let array = ["a", "c", "b", "d"];
+
+array.flip(1, 2); // ["a", "b", "c", "d"]
+```
+**array.includesFor(array);**
+```js
+// the equivalent of using a for loop to chcek if an array includes stuff
+// works pretty much the same as string.includesFor() so I won't explain much
+```
+**divmod(x, y);**
+```js
+// port of the divmod() function from python
+// used mostly for time stuff
+let seconds = 120;
+
+let [minutes, seconds] = divmod(seconds, 60); // minutes = 2
+```
