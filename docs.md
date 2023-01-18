@@ -215,3 +215,11 @@ var variable = {
 
 variable.fetchValues(1); // ["d", "e"]
 ```
+## Miscellaneous
+**string.replaceFor(array, replaceWith);**
+```js
+// the equivalent of using a for loop to replace stuff
+let string = "number stuffs object this is an array";
+
+string.replaceFor(["number", "object", "array"], "string"); // "string stuffs string this is a string"
+```
