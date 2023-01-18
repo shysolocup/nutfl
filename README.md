@@ -135,7 +135,7 @@ console.log(data.fetchValues(1)); // ["d", "e"]
 - array.includesFor(array);
 
 **Strings:**
-- string.replaceFor(array);
+- string.replaceFor(array, replaceWith);
 - string.endsWithC(string);
 - string.startsWithC(string);
 - string.get(index, type`word or letter`);
