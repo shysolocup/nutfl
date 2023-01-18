@@ -126,8 +126,8 @@ console.log(data.fetchValues(1)); // ["d", "e"]
 
 **Array:**
 - array.randomChoice();
-- array.endsWithC(string);
-- array.startsWithC(string);
+- array.endsWithC(char);
+- array.startsWithC(char);
 - array.equalFor(array);
 - array.prune(amount, direction);
 - array.remove(index);
@@ -136,8 +136,8 @@ console.log(data.fetchValues(1)); // ["d", "e"]
 
 **Strings:**
 - string.replaceFor(array, replaceWith);
-- string.endsWithC(string);
-- string.startsWithC(string);
+- string.endsWithC(char);
+- string.startsWithC(char);
 - string.get(index, type`word or letter`);
 - string.includesFor(array);
 - string.startsWithFor(array);
