@@ -223,3 +223,9 @@ let string = "number stuffs object this is an array";
 
 string.replaceFor(["number", "object", "array"], "string"); // "string stuffs string this is a string"
 ```
+**string.endsWithC(string);**
+```js
+// check if a string ends with given characters instead of words
+let string = "abc def";
+
+string.endsWithC("f")
