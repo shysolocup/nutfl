@@ -37,6 +37,10 @@ Array.prototype.remove = function(int) {
 	const [res, o] = [ [], this]; for (let i = 0; i < o.length; i++) { if (i < int || i > int) { res.push(this.shift()); } if (i == int) { this.shift(); }} return res;
 };
 
+String.prototype.remove = function(int) {
+	const [res, o] = [ [], this]; for (let i = 0; i < o.length; i++) { if (i < int || i > int) { res.push(this.shift()); } if (i == int) { this.shift(); }} return res.join("");
+};
+
 Array.prototype.flip = function(int1, int2) {
 	[this[int1], this[int2]] = [this[int2], this[int1]]; return this;
 };
@@ -111,6 +115,12 @@ Object.prototype.stringify = function(replacer=null, indent=null) {
 
 Object.prototype.parse = function(reviver=null) {
 	return JSON.parse(this, reviver);
+};
+
+Object.prototype.forEach = function(func) {
+    for (let i = 0; i < Object.keys(this).length; i++) {
+        func({ key: Object.keys(this)[i], value: this[Object.keys(this)[i]] });
+    }
 };
 
 Object.defineProperty(Object.prototype, "keys", {
