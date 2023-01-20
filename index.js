@@ -101,6 +101,10 @@ Number.prototype.vh_to_px = function() {
 	return Math.round(this*6.11111111111);
 };
 
+Number.prototype.forEach = function(func) {
+    for (let i = 0; i < this.toString().length; i++) { func(parseInt(this.toString()[i])); }
+}
+
 Object.prototype.fetchKey = function(index) {
 	return Object.keys(this)[index];
 };
