@@ -89,6 +89,10 @@ String.prototype.isType = function(type) {
 	return (this.toLowerCase().endsWith(`.${type}`)) ? true : false;
 };
 
+String.prototype.forEach = function(func) {
+    for (let i = 0; i < this.length; i++) { func(this[i]); }
+};
+
 Number.prototype.px_to_vh = function() {
 	return Math.round(this/6.11111111111);
 };
