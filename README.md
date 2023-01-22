@@ -15,7 +15,7 @@ var {random} = require('./nutfl');
 
 **Asyncio:**
 ```js
-var {asyncio} = require('./nutfl");
+var {asyncio} = require('./nutfl');
 ```
 - asyncio.sleep(seconds);
 - asyncio.sleepMs(milliseconds);
