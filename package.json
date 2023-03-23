@@ -7,6 +7,9 @@
         "type": "git",
         "url": "https://github.com/nuttmegg/nutfl.git"
     },
+    "dependencies": {
+        "stews": "latest"
+    },
     "bugs": {
         "url": "https://github.com/nuttmegg/nutfl/issues"
     },
