@@ -1,7 +1,23 @@
 {
     "name": "nutfl",
-    "version": "1.0.0",
-    "description": "A package for JavaScript that is essentially just a library of functions I use while scripting. It includes recreations of some Python package functions as well as a few custom functions that might help with development. Most of the functions work for both Node JS and Web JS.",
-    "type": "package",
+    "version": "2.0.0",
+    "author": "nutmeg",
+    "description": "Library of Python package ports and custom functions",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nuttmegg/nutfl.git"
+    },
+    "bugs": {
+        "url": "https://github.com/nuttmegg/nutfl/issues"
+    },
+    "keywords": [
+        "py",
+        "python",
+        "arrays",
+        "objects",
+        "sets",
+        "maps"
+    ],
+    "homepage": "https://youtu.be/dQw4w9WgXcQ",
     "main": "./index.js"
 }
